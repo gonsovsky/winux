@@ -1,0 +1,13 @@
+2020-08-21 17:31:08.297 +03:00 [Debug] Hosting starting
+2020-08-21 17:31:08.339 +03:00 [Information] Daemon or Console: I'm started as Console or Daemon
+2020-08-21 17:31:43.009 +03:00 [Debug] Hosting starting
+2020-08-21 17:31:43.080 +03:00 [Information] Daemon or Console: I'm started as Console or Daemon
+2020-08-21 17:33:25.650 +03:00 [Debug] Hosting starting
+2020-08-21 17:33:25.687 +03:00 [Information] Daemon or Console: I'm started as Console or Daemon
+2020-08-21 17:33:25.703 +03:00 [Information] United Win/Linux Web Service: I'm tick: 21.08.2020 17:33:25
+2020-08-21 17:33:25.703 +03:00 [Information] Daemon or Console: StartAsync method called.
+2020-08-21 17:33:25.705 +03:00 [Information] Daemon or Console: OnStarted method called.
+2020-08-21 17:33:25.707 +03:00 [Debug] Hosting started
+2020-08-21 17:33:30.704 +03:00 [Information] United Win/Linux Web Service: I'm tick: 21.08.2020 17:33:30
+2020-08-21 17:33:35.703 +03:00 [Information] United Win/Linux Web Service: I'm tick: 21.08.2020 17:33:35
+2020-08-21 17:33:40.703 +03:00 [Information] United Win/Linux Web Service: I'm tick: 21.08.2020 17:33:40

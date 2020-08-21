@@ -1,0 +1,12 @@
+D:\@@@SOFT\winux\bin\Release\netcoreapp2.1\winux.deps.json
+D:\@@@SOFT\winux\bin\Release\netcoreapp2.1\winux.runtimeconfig.json
+D:\@@@SOFT\winux\bin\Release\netcoreapp2.1\winux.runtimeconfig.dev.json
+D:\@@@SOFT\winux\bin\Release\netcoreapp2.1\winux.dll
+D:\@@@SOFT\winux\bin\Release\netcoreapp2.1\winux.pdb
+D:\@@@SOFT\winux\obj\Release\netcoreapp2.1\winux.csprojAssemblyReference.cache
+D:\@@@SOFT\winux\obj\Release\netcoreapp2.1\winux.AssemblyInfoInputs.cache
+D:\@@@SOFT\winux\obj\Release\netcoreapp2.1\winux.AssemblyInfo.cs
+D:\@@@SOFT\winux\obj\Release\netcoreapp2.1\winux.csproj.CoreCompileInputs.cache
+D:\@@@SOFT\winux\obj\Release\netcoreapp2.1\winux.dll
+D:\@@@SOFT\winux\obj\Release\netcoreapp2.1\winux.pdb
+D:\@@@SOFT\winux\obj\Release\netcoreapp2.1\winux.genruntimeconfig.cache
