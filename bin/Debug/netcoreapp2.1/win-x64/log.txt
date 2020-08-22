@@ -1,5 +1,0 @@
-22.08.2020 16:07:52:Service is started. Log file: D:\@@@SOFT\winux\bin\Debug\netcoreapp2.1\win-x64/log.txt
-22.08.2020 16:07:56:Linux SIGTERM || Windows SCM Stop Command || Console break requested.
-22.08.2020 16:07:57:Graceful Shutdown and sleep for 1 seconds...
-22.08.2020 16:07:57:Socket server closed
-22.08.2020 16:07:58:Everything is stopped

@@ -1,8 +1,0 @@
-22.08.2020 16:26:41:Web is started http://localhost:8081. Log file: D:\@@@SOFT\winux\bin\Debug\netcoreapp2.1/log.txt
-22.08.2020 16:26:44:ConsoleCtrlCheck:CTRL_C_EVENT
-22.08.2020 16:26:44:Linux SIGTERM || Windows SCM Stop Command || Console break requested.
-22.08.2020 16:26:44:Graceful Shutdown and sleep for 1 seconds...
-22.08.2020 16:26:44:Socket server closed
-22.08.2020 16:26:45:Everything is stopped
-22.08.2020 16:26:45:OnAssemblyLoadContextUnloading
-22.08.2020 16:26:45:CurrentDomain.ProcessExit

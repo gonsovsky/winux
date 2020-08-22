@@ -1,1 +1,0 @@
-22.08.2020 16:32:12:Web is started http://localhost:8081. Log file: D:\@@@SOFT\winux\bin\debug\netcoreapp2.1\win-x64\publish/log.txt
