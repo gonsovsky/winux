@@ -1,5 +1,6 @@
 Winux - .netCore 2.0 приложение для работы в режимх
 
++ linux daemon 
 + windows service 
 + windows console 
 
