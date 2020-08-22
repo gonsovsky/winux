@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "D:\\@@@SOFT\\winux\\winux.csproj",
-        "projectName": "winux",
+        "projectName": "Winux",
         "projectPath": "D:\\@@@SOFT\\winux\\winux.csproj",
         "packagesPath": "C:\\Users\\K\\.nuget\\packages\\",
         "outputPath": "D:\\@@@SOFT\\winux\\obj\\",
@@ -41,63 +41,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
-            "Microsoft.Extensions.Configuration.CommandLine": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
-            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
-            "Microsoft.Extensions.Hosting": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
-            "Microsoft.Extensions.Hosting.Abstractions": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
-            "Microsoft.Extensions.Logging": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
-            "Microsoft.Extensions.Logging.Configuration": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
-            "Microsoft.Extensions.Logging.Console": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
-            "Microsoft.Extensions.Logging.Debug": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.20, )",
               "autoReferenced": true
-            },
-            "Serilog.Extensions.Logging": {
-              "target": "Package",
-              "version": "[2.0.2, )"
-            },
-            "Serilog.Extensions.Logging.File": {
-              "target": "Package",
-              "version": "[1.1.0, )"
-            },
-            "Serilog.Settings.Configuration": {
-              "target": "Package",
-              "version": "[2.6.1, )"
-            },
-            "System.ServiceProcess.ServiceController": {
-              "target": "Package",
-              "version": "[4.5.0, )"
             }
           },
           "imports": [
@@ -114,7 +62,7 @@
         }
       },
       "runtimes": {
-        "win10-x64": {
+        "win-x64": {
           "#import": []
         }
       }

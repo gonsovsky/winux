@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("winux")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Winux")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("winux")]
-[assembly: System.Reflection.AssemblyTitleAttribute("winux")]
+[assembly: System.Reflection.AssemblyProductAttribute("Winux")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Winux")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.
