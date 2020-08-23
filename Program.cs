@@ -1,18 +1,16 @@
-﻿using System;
-
-
-
-namespace Winux
+﻿namespace Winux
 {
-    static class Program
+    internal static class Program
     {
-        static int Main(string[] args)
+        private static int Main(string[] args)
         {
             return Winux.Run
                 (
-                    () =>
+                    args,
+
+                    (a) =>
                     {
-                        ExampleWebServer.Start();
+                        ExampleWebServer.Start(a);
                     }
 
                     ,

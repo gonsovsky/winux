@@ -1,20 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Net.Sockets;
 using System.Reflection;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Winux
 {
     public static class ExampleWebServer
     {
-        static CancellationTokenSource tkn = new CancellationTokenSource();
-        public static void Start()
+        public static void Start(string[] args)
         {
             string codeBase = Assembly.GetExecutingAssembly().CodeBase;
             UriBuilder uri = new UriBuilder(codeBase);
@@ -29,79 +24,84 @@ namespace Winux
             Serve().Wait();
         }
 
-        public async static Task Serve()
+        public static async Task Serve()
         {
-            _listener.Start();
-
-            while (true)
+            try
             {
-                try
+                _listener.Start();
+
+                while (true)
                 {
-                    var ctx = await _listener.GetContextAsync();
-
-                    ExampleWebServer.Message("Received request: " + ctx.Request.RawUrl + " from " + ctx.Request.UserHostAddress);
-
-                    ctx.Response.Headers.Add("content-type: text/plain; charset=UTF-8");
-                    ctx.Response.Headers.Add("x-content-type-options: nosniff");
-                    ctx.Response.Headers.Add("x-xss-protection:1; mode=block");
-                    ctx.Response.Headers.Add("x-frame-options:DENY");
-                    ctx.Response.Headers.Add("cache-control:no-store, no-cache, must-revalidate");
-                    ctx.Response.Headers.Add("pragma:no-cache");
-                    ctx.Response.Headers.Add("Server", "jl");
-
-                    var response = string.Join("\r\n\r\n", ExampleWebServer._msgs);
-                    using (var sw = new StreamWriter(ctx.Response.OutputStream))
+                    try
                     {
-                        await sw.WriteAsync(response);
-                        await sw.FlushAsync();
+                        var ctx = await _listener.GetContextAsync();
+
+                        Message("Received request: " + ctx.Request.RawUrl + " from " + ctx.Request.UserHostAddress);
+
+                        ctx.Response.Headers.Add("content-type: text/plain; charset=UTF-8");
+                        ctx.Response.Headers.Add("x-content-type-options: nosniff");
+                        ctx.Response.Headers.Add("x-xss-protection:1; mode=block");
+                        ctx.Response.Headers.Add("x-frame-options:DENY");
+                        ctx.Response.Headers.Add("cache-control:no-store, no-cache, must-revalidate");
+                        ctx.Response.Headers.Add("pragma:no-cache");
+                        ctx.Response.Headers.Add("Server", "jl");
+
+                        var response = string.Join("\r\n\r\n", Msgs);
+                        using (var sw = new StreamWriter(ctx.Response.OutputStream))
+                        {
+                            await sw.WriteAsync(response);
+                            await sw.FlushAsync();
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Message("Socket server closed: " + e.Message);
+                        break;
                     }
                 }
-                catch {
-                    break;
-                };
-                
+                Task.Delay(500).Wait();
             }
-            Message("Socket server closed");
-            Task.Delay(500).Wait();
+            catch(Exception e)
+            {
+                Message("Socket server error: " + e.Message);
+            }
         }
             
-
         public static void Stop()
         {
             Message("Linux SIGTERM || Windows SCM Stop Command || Console break requested.");
             Task.Delay(500).Wait();
-            Message("Graceful Shutdown and sleep for 1 seconds...");
+            Message("Graceful shutdown and sleep for 1 seconds...");
 
             Console.Out.WriteLine(
                 "Stopping server...");
             try
             {
-
-                    _listener.Stop();
+                _listener.Stop();
                     _listener.Close();
           
             }
-            catch{ };
-
+            catch
+            {
+                // ignored
+            }
             Task.Delay(500).Wait();
             Message("Everything is stopped");
             Task.Delay(500).Wait();
         }
 
         public static string Log;
-      
 
         public static void Message(string message)
         {
             message = DateTime.Now + ":" + message;
-            _msgs.Add(message);
+            Msgs.Add(message);
             Console.WriteLine(message);
             File.AppendAllText(Log, message + "\r\n");
         }
 
-        private static  List<string> _msgs = new List<string>();
+        private static readonly List<string> Msgs = new List<string>();
 
         private static  HttpListener _listener;
-
     }
 }

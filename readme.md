@@ -1,19 +1,18 @@
-Winux - .netCore 2.0 приложение для работы в режимх
+Winux - .netCore 2.0 приложение в режимах
 
-+ linux daemon 
++ linux daemon
 + windows service 
 + windows console 
 
-+ без дополнительной параметризации
-+ без дополнительных библиотек
++ без дополнительных библиотек и параметризации
 
-Winux принимает сигналы завершния работы
+Обрабатываются сигналы
 
 + linux SIG_TERM 
-+ windows SERVICE_STOPPED (в режиме сервиса NT)
-+ windows Console Break (в режиме консоли или отладчика)
++ windows SERVICE_STOPPED (NT)
++ windows Console Break (консоли/отладчик)
 
-+ безавариано останавливает работу
++ безаварийно останавливает работу
 
 Для теста:
 http://127.0.01:8081
